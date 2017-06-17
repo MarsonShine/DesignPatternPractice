@@ -63,6 +63,14 @@
     <Compile Include="Proxy\Proxy.cs" />
     <Compile Include="Proxy\Pursuit.cs" />
     <Compile Include="Proxy\SchoolGirl.cs" />
+    <Compile Include="Visitor\Action.cs" />
+    <Compile Include="Visitor\Amativeness.cs" />
+    <Compile Include="Visitor\Failing.cs" />
+    <Compile Include="Visitor\Man.cs" />
+    <Compile Include="Visitor\ObjectStructure.cs" />
+    <Compile Include="Visitor\Person.cs" />
+    <Compile Include="Visitor\Success.cs" />
+    <Compile Include="Visitor\Woman.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

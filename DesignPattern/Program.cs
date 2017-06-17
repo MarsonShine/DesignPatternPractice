@@ -2,6 +2,7 @@
 using DesignPattern.ChainOfResponsibility;
 using DesignPattern.Decorator;
 using DesignPattern.Proxy;
+using DesignPattern.Visitor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,6 +51,7 @@ namespace DesignPattern
             hb2.SetHandsetSoft(new HandsetAddressList());
             hb2.Run(); 
 #endif
+#if ChainOfResiposibility
             CommonManager jinli = new CommonManager("jinli");
             Majordomo zongjian = new Majordomo("zongjian");
             GeneralManager zhongjingli = new GeneralManager("zhongjinli");
@@ -72,7 +74,18 @@ namespace DesignPattern
             request3.RequestType = "请假";
             request3.RequestContent = "我还是要请假";
             request.Number = 500;
-            jinli.RequestApplications(request3);
+            jinli.RequestApplications(request3); 
+#endif
+            ObjectStructure o = new ObjectStructure();
+            o.Attach(new Man());
+            o.Attach(new Woman());
+
+            Success v1 = new Success();
+            o.Display(v1);
+
+            Failing v2 = new Failing();
+            o.Display(v2);
+
 
         }
     }
